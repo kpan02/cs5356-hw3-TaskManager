@@ -7,9 +7,9 @@ import TaskStats from './components/TaskStats';
 import CategoryFilter from './components/CategoryFilter';
 
 const initialTasks = [
-  { id: 1, text: 'Refill food bowl before yowling begins', completed: false, dueDate: null, category: null },
-  { id: 2, text: 'Schedule vet visit, prepare for betrayal', completed: false, dueDate: null, category: null },
-  { id: 3, text: 'Remove cat from keyboard (again)', completed: true, dueDate: null, category: null },
+  { id: 1, text: 'Math Homework', completed: false, dueDate: null, category: 'School' },
+  { id: 2, text: 'Submit Report', completed: false, dueDate: null, category: 'Work' },
+  { id: 3, text: 'Buy Groceries', completed: true, dueDate: null, category: 'Personal' },
 ];
 
 const App = () => {
