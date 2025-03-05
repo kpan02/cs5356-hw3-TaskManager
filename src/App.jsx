@@ -5,9 +5,9 @@ import TaskList from './components/TaskList';
 import TaskStats from './components/TaskStats';
 
 const initialTasks = [
-  { id: 1, text: 'Refill food bowl before yowling begins', completed: false },
-  { id: 2, text: 'Schedule vet visit, prepare for betrayal', completed: false },
-  { id: 3, text: 'Remove cat from keyboard (again)', completed: true },
+  { id: 1, text: 'Refill food bowl before yowling begins', completed: false, dueDate: null },
+  { id: 2, text: 'Schedule vet visit, prepare for betrayal', completed: false, dueDate: null },
+  { id: 3, text: 'Remove cat from keyboard (again)', completed: true, dueDate: null },
 ];
 
 const App = () => {
@@ -17,7 +17,8 @@ const App = () => {
     const newTask = {
       id: Date.now(),
       text,
-      completed: false
+      completed: false,
+      dueDate: null,
     };
     setTasks([newTask, ...tasks]);
   };
@@ -32,6 +33,12 @@ const App = () => {
     setTasks(tasks.filter(task => task.id !== taskId));
   };
 
+  const updateDueDate = (taskId, date) => {
+    setTasks(tasks.map(task => 
+      task.id === taskId ? { ...task, dueDate: date } : task
+    ));
+  };
+
   return (
     <main>
       <h1>Task Manager</h1>
@@ -40,6 +47,7 @@ const App = () => {
         tasks={tasks}
         onToggleComplete={toggleComplete}
         onDelete={deleteTask}
+        onUpdateDueDate={updateDueDate}
       />
       <TaskStats tasks={tasks} />
     </main>
