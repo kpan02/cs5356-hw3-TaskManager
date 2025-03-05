@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import useLocalStorageState from 'use-local-storage-state';
 
 import TaskForm from './components/TaskForm';
 import TaskList from './components/TaskList';
@@ -12,7 +13,7 @@ const initialTasks = [
 ];
 
 const App = () => {
-  const [tasks, setTasks] = useState(initialTasks);
+  const [tasks, setTasks] = useLocalStorageState('tasks', { defaultValue: initialTasks });
   const [categoryFilter, setCategoryFilter] = useState(null);
 
   const addTask = (text, dueDate = null, category = null) => {
