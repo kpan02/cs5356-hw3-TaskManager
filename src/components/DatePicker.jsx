@@ -13,17 +13,17 @@ import {
 
 const DatePicker = ({ date, onDateChange, className }) => {
     return (
-        <div className={className}>
+        <div className={cn(className, "border border-gray-200 rounded-md")}>
             <Popover>
                 <PopoverTrigger asChild>
                     <button
                         type="button"
                         className={cn(
-                            "w-full justify-start text-left font-normal border rounded-md px-4 py-2",
+                            "w-full h-full flex items-center justify-center text-center font-normal border rounded-md px-4 py-2",
                             !date && "text-muted-foreground",
                         )}
                     >
-                        <CalendarIcon className="mr-2 h-4 w-4"/>
+                        <CalendarIcon className="mr-2 h-4 w-4 my-auto"/>
                         {date ? format(date, 'PPP') : <span>Pick a date</span>}
                     </button>
                 </PopoverTrigger>

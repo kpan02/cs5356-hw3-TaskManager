@@ -2,7 +2,7 @@ import React from 'react';
 import DatePicker from './DatePicker';
 
 const TaskItem = ({ task, onToggleComplete, onDelete, onUpdateDueDate }) => (
-  <li className="task-item">
+  <li className="task-item flex justify-between">
     <div className="flex items-center">
       <button
         onClick={() => onToggleComplete(task.id)}
