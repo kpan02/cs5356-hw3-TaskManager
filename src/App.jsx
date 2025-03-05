@@ -13,12 +13,12 @@ const initialTasks = [
 const App = () => {
   const [tasks, setTasks] = useState(initialTasks);
 
-  const addTask = (text) => {
+  const addTask = (text, dueDate = null) => {
     const newTask = {
       id: Date.now(),
       text,
       completed: false,
-      dueDate: null,
+      dueDate,
     };
     setTasks([newTask, ...tasks]);
   };
@@ -41,7 +41,7 @@ const App = () => {
 
   return (
     <main>
-      <h1>Task Manager</h1>
+      <h1 className="text-center">Task Manager</h1>
       <TaskForm onAddTask={addTask} />
       <TaskList
         tasks={tasks}
