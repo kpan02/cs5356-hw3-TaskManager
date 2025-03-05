@@ -22,7 +22,7 @@ const DatePicker = ({ date, onDateChange, className }) => {
                         )}
                     >
                         <CalendarIcon className="mr-2 h-4 w-4 my-auto"/>
-                        {date ? format(date, 'PPP') : <span>Pick a date</span>}
+                        {date ? format(date, 'MM/dd/yyyy') : <span>Pick a date</span>}
                     </button>
                 </PopoverTrigger>
 

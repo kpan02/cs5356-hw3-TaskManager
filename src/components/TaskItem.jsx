@@ -2,7 +2,7 @@ import React from 'react';
 import DatePicker from './DatePicker';
 import Category from './Categories';
 
-const TaskItem = ({ task, onToggleComplete, onDelete, onUpdateDueDate }) => (
+const TaskItem = ({ task, onToggleComplete, onDelete, onUpdateDueDate, onUpdateCategory }) => (
   <li className="task-item flex justify-between">
     <div className="flex flex-col w-full">
       <div className="flex items-center justify-between">
@@ -41,6 +41,8 @@ const TaskItem = ({ task, onToggleComplete, onDelete, onUpdateDueDate }) => (
         <Category 
           style={{ marginLeft: '2.3rem' }}
           className="scale-75"
+          selectedCategory={task.category}
+          onCategoryChange={(category) => onUpdateCategory(task.id, category)}
         />
       </div>
     </div>

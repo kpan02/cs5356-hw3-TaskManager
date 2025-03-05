@@ -1,6 +1,6 @@
 import TaskItem from './TaskItem';
 
-const TaskList = ({ tasks, onToggleComplete, onDelete, onUpdateDueDate }) => (
+const TaskList = ({ tasks, onToggleComplete, onDelete, onUpdateDueDate, onUpdateCategory }) => (
   <ul className="task-list">
     {tasks.map(task => (
       <TaskItem
@@ -9,6 +9,7 @@ const TaskList = ({ tasks, onToggleComplete, onDelete, onUpdateDueDate }) => (
         onToggleComplete={onToggleComplete}
         onDelete={onDelete}
         onUpdateDueDate={onUpdateDueDate}
+        onUpdateCategory={onUpdateCategory}
       />
     ))}
   </ul>
