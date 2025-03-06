@@ -5,6 +5,7 @@
   "homepage": "https://kpan02.github.io/cs5356-hw3-TaskManager/",
   "type": "module",
 "scripts": {
+    "dev": "vite",
     "build": "vite build",
     "predeploy": "pnpm build",
     "deploy": "gh-pages -d dist"

@@ -7,9 +7,9 @@ import TaskStats from './components/TaskStats';
 import CategoryFilter from './components/CategoryFilter';
 
 const initialTasks = [
-  { id: 1, text: 'Math Homework', completed: false, dueDate: null, category: 'School' },
-  { id: 2, text: 'Submit Report', completed: false, dueDate: null, category: 'Work' },
-  { id: 3, text: 'Buy Groceries', completed: true, dueDate: null, category: 'Personal' },
+  { id: 1, text: 'Math Homework', completed: false, dueDate: null, category: 2 },
+  { id: 2, text: 'Submit Report', completed: false, dueDate: null, category: 1 },
+  { id: 3, text: 'Buy Groceries', completed: false, dueDate: null, category: 3 },
 ];
 
 const App = () => {
