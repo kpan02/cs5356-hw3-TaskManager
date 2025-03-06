@@ -1,5 +1,3 @@
 # Task Manager
 
-This is a simple task manager built with React.
-
-The idea is to introduce both a minimal dev environment and build environment, as well as to cover some aspects of react by gradually adding complexity.
+Task manager app built with React, Tailwind CSS, and shadcn/ui. It features a date picker for setting task due dates, category-based task filtering, and a persistent state to save tasks across sessions.
